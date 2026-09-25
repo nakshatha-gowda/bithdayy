@@ -1,0 +1,730 @@
+<!-- =====================================================
+     PAGE 5 - MAKE A WISH
+====================================================== -->
+
+<section id="page5" class="page wish-page">
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="love-song1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Button -->
+    <button
+        class="music-button"
+        id="musicButton"
+        title="Play / Pause Music">
+        🔊
+    </button>
+
+    <div class="wish-title">
+        ✨ MAKE A WISH ✨
+    </div>
+
+    <!-- Messages appear one by one -->
+    <div class="wish-sequence">
+
+        <p class="wish-message active">
+            ega nan yen heltini adunna astee madbeku ok naa 🥰
+        </p>
+
+        <p class="wish-message">
+            take a deep breath💕
+        </p>
+
+        <p class="wish-message">
+            nakshatha ur sooo cute anta helu
+            <br>
+            nin helalla bidu adru ega heldalla 🥰🌸
+        </p>
+
+        <p class="wish-message">
+            so ok u have 1min time so MAKE A BIG WISH
+            <br>
+            ninge yen beku beda agbeku agbardu yella kelkoo
+            <br>
+            close ur eyes fast fast...💫
+        </p>
+
+        <p class="wish-message">
+            nan bagheee yen adru wish madkonda ella alva bidu hogli ✨
+        </p>
+
+        <p class="wish-message final-message">
+            ✨ adruu nin yen wish madkonde anta nange gothu biduu ✨
+            <br><br>
+            🥰 thathasthuuuuuuuuu💕
+        </p>
+
+    </div>
+
+    <!-- Progress dots -->
+    <div class="wish-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <!-- NEXT BUTTON -->
+    <a href="page2.html" class="next">
+        hogonva nextuu🪐💕 →
+    </a>
+
+</section>
+
+
+<style>
+
+    /* =========================
+       PAGE 5
+    ========================= */
+
+    .wish-page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+        box-sizing: border-box;
+
+        background:
+            linear-gradient(
+                135deg,
+                #ff9a9e,
+                #fad0c4
+            );
+
+        transition:
+            background 1.5s ease;
+
+        overflow: hidden;
+        position: relative;
+    }
+
+
+    /* =========================
+       MUSIC BUTTON
+    ========================= */
+
+    .music-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.9);
+        color: #ff1493;
+        font-size: 25px;
+        cursor: pointer;
+        z-index: 100;
+
+        box-shadow:
+            0 5px 20px rgba(0,0,0,0.3);
+
+        transition: 0.3s;
+    }
+
+    .music-button:hover {
+        transform: scale(1.1);
+        background: white;
+    }
+
+
+    /* =========================
+       TITLE
+    ========================= */
+
+    .wish-title {
+        font-size: 55px;
+        font-weight: bold;
+        margin-bottom: 35px;
+        color: white;
+
+        text-shadow:
+            0 0 10px white,
+            0 0 20px #ff1493,
+            0 0 35px #ff69b4;
+
+        animation:
+            heartbeat 1.5s infinite;
+    }
+
+
+    /* =========================
+       MESSAGE AREA
+    ========================= */
+
+    .wish-sequence {
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        min-height: 180px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* =========================
+       EACH MESSAGE
+    ========================= */
+
+    .wish-message {
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+
+        font-size: 30px;
+        line-height: 1.6;
+        color: white;
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.9);
+
+        transition:
+            opacity 1s ease,
+            transform 1s ease;
+
+        text-shadow:
+            0 0 10px rgba(255,255,255,0.9),
+            0 0 20px #ff1493,
+            0 0 35px rgba(255,20,147,0.7);
+    }
+
+
+    /* Active message */
+
+    .wish-message.active {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+
+    /* Final message */
+
+    .final-message {
+        font-size: 34px;
+        font-weight: bold;
+    }
+
+
+    /* =========================
+       DOTS
+    ========================= */
+
+    .wish-dots {
+        display: flex;
+        gap: 10px;
+        margin-top: 25px;
+        z-index: 5;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+
+        background:
+            rgba(245, 162, 209, 0.936);
+
+        transition:
+            all 0.5s ease;
+    }
+
+    .dot.active {
+        width: 25px;
+        border-radius: 10px;
+
+        background: rgb(242, 203, 203);
+
+        box-shadow:
+            0 0 10px rgb(246, 198, 198),
+            0 0 20px #ff1493;
+    }
+
+
+    /* =========================
+       NEXT BUTTON
+    ========================= */
+
+    .wish-page .next {
+        margin-top: 35px;
+
+        opacity: 0;
+        pointer-events: none;
+
+        transition:
+            opacity 1s ease;
+
+        text-decoration: none;
+        color: rgb(64, 33, 49);
+
+        font-size: 20px;
+        font-weight: bold;
+
+        padding: 12px 22px;
+        border-radius: 25px;
+
+        background:
+            rgba(161, 149, 229, 0.9);
+
+        box-shadow:
+            0 0 15px rgba(56, 9, 37, 0.873);
+
+        z-index: 10;
+    }
+
+    .wish-page .next.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+    /* =========================
+       BACKGROUND PARTICLES
+    ========================= */
+
+    .wish-page::before {
+        content:
+            "✨ 💕 ✨ 💖 ✨ 🌸 ✨ 💕 ✨";
+
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+
+        font-size: 25px;
+        letter-spacing: 25px;
+        opacity: 0.35;
+
+        animation:
+            floatingStars 8s linear infinite;
+
+        pointer-events: none;
+    }
+
+
+    /* =========================
+       ANIMATIONS
+    ========================= */
+
+    @keyframes heartbeat {
+
+        0%, 100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
+    }
+
+
+    @keyframes floatingStars {
+
+        0% {
+            transform:
+                translateY(0)
+                rotate(0deg);
+        }
+
+        50% {
+            transform:
+                translateY(80px)
+                rotate(5deg);
+        }
+
+        100% {
+            transform:
+                translateY(0)
+                rotate(0deg);
+        }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+        .wish-page {
+            padding:
+                20px 15px;
+        }
+
+        .wish-title {
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .wish-sequence {
+            min-height: 200px;
+        }
+
+        .wish-message {
+            font-size: 22px;
+            padding: 15px;
+        }
+
+        .final-message {
+            font-size: 25px;
+        }
+
+        .wish-dots {
+            gap: 7px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+        }
+
+        .dot.active {
+            width: 20px;
+        }
+
+        .music-button {
+            width: 48px;
+            height: 48px;
+            font-size: 22px;
+            top: 15px;
+            right: 15px;
+        }
+    }
+
+</style>
+
+
+<script>
+
+    /* =====================================================
+       WISH MESSAGE SEQUENCE
+    ====================================================== */
+
+    const wishMessages =
+        document.querySelectorAll(
+            "#page5 .wish-message"
+        );
+
+    const wishDots =
+        document.querySelectorAll(
+            "#page5 .wish-dots .dot"
+        );
+
+    const wishPage =
+        document.querySelector(
+            "#page5.wish-page"
+        );
+
+    const nextButton =
+        document.querySelector(
+            "#page5 .next"
+        );
+
+
+    /* =========================
+       BACKGROUNDS
+    ========================= */
+
+    const wishBackgrounds = [
+
+        "linear-gradient(135deg, #ff9a9e, #fad0c4)",
+
+        "linear-gradient(135deg, #a18cd1, #fbc2eb)",
+
+        "linear-gradient(135deg, #84fab0, #8fd3f4)",
+
+        "linear-gradient(135deg, #f6d365, #fda085)",
+
+        "linear-gradient(135deg, #ffecd2, #fcb69f)",
+
+        "linear-gradient(135deg, #c2e9fb, #a1c4fd)",
+
+        "linear-gradient(135deg, #ff758c, #ff7eb3)"
+    ];
+
+
+    let currentWish = 0;
+
+
+    /* =========================
+       SHOW WISH
+    ========================= */
+
+    function showWish(index) {
+
+        /* Hide all messages */
+
+        wishMessages.forEach(function(message) {
+
+            message.classList.remove("active");
+
+        });
+
+
+        /* Remove active from dots */
+
+        wishDots.forEach(function(dot) {
+
+            dot.classList.remove("active");
+
+        });
+
+
+        /* Show selected message */
+
+        if (wishMessages[index]) {
+
+            wishMessages[index]
+                .classList.add("active");
+
+        }
+
+
+        /* Activate selected dot */
+
+        if (wishDots[index]) {
+
+            wishDots[index]
+                .classList.add("active");
+
+        }
+
+
+        /* Change background */
+
+        if (wishBackgrounds[index]) {
+
+            wishPage.style.background =
+                wishBackgrounds[index];
+
+        }
+
+
+        /* Show Next button on final message */
+
+        if (
+            index ===
+            wishMessages.length - 1
+        ) {
+
+            setTimeout(function() {
+
+                if (nextButton) {
+
+                    nextButton.classList.add("show");
+
+                }
+
+            }, 1000);
+        }
+    }
+
+
+    /* =========================
+       START
+    ========================= */
+
+    showWish(0);
+
+
+    /* =====================================================
+       WISH MESSAGE TIMING
+
+       4th message stays for 1 minute.
+       All other messages stay for 7 seconds.
+    ====================================================== */
+
+    function runWishSequence() {
+
+        if (
+            currentWish >=
+            wishMessages.length - 1
+        ) {
+            return;
+        }
+
+
+        const delay =
+            currentWish === 3
+                ? 60000
+                : 7000;
+
+
+        setTimeout(function() {
+
+            currentWish++;
+
+            if (
+                currentWish <
+                wishMessages.length
+            ) {
+
+                showWish(currentWish);
+
+                runWishSequence();
+
+            }
+
+        }, delay);
+    }
+
+
+    runWishSequence();
+
+
+    /* =====================================================
+       BACKGROUND MUSIC
+    ====================================================== */
+
+    const music =
+        document.getElementById(
+            "backgroundMusic"
+        );
+
+    const musicButton =
+        document.getElementById(
+            "musicButton"
+        );
+
+
+    /* Music volume */
+
+    music.volume = 0.7;
+
+
+    /* =========================
+       START MUSIC
+    ========================= */
+
+    function startMusic() {
+
+        music.play().then(function() {
+
+            musicButton.innerHTML = "🔊";
+
+        }).catch(function() {
+
+            /*
+                Browser blocked autoplay.
+                Music will start after
+                the first interaction.
+            */
+
+        });
+    }
+
+
+    /* Try autoplay on page load */
+
+    window.addEventListener(
+        "load",
+        function() {
+
+            startMusic();
+
+        }
+    );
+
+
+    /* =========================
+       FIRST USER INTERACTION
+    ========================= */
+
+    function enableMusicAfterInteraction() {
+
+        startMusic();
+
+
+        document.removeEventListener(
+            "click",
+            enableMusicAfterInteraction
+        );
+
+        document.removeEventListener(
+            "touchstart",
+            enableMusicAfterInteraction
+        );
+
+        document.removeEventListener(
+            "keydown",
+            enableMusicAfterInteraction
+        );
+    }
+
+
+    document.addEventListener(
+        "click",
+        enableMusicAfterInteraction
+    );
+
+    document.addEventListener(
+        "touchstart",
+        enableMusicAfterInteraction
+    );
+
+    document.addEventListener(
+        "keydown",
+        enableMusicAfterInteraction
+    );
+
+
+    /* =========================
+       MUSIC PLAY / PAUSE
+    ========================= */
+
+    musicButton.addEventListener(
+        "click",
+        function(event) {
+
+            event.stopPropagation();
+
+            if (music.paused) {
+
+                music.play().then(function() {
+
+                    musicButton.innerHTML = "🔊";
+
+                }).catch(function() {
+
+                    musicButton.innerHTML = "🔇";
+
+                });
+
+            } else {
+
+                music.pause();
+
+                musicButton.innerHTML = "🔇";
+            }
+        }
+    );
+
+</script>
+
+
+<!-- =====================================================
+     EXTRA NEXT BUTTON
+====================================================== -->
+
+<a href="page2.html" class="next">
+    Nextttt💕 →
+</a>

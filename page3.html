@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>I Hate You Gugukhaannnn 😝</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            background: linear-gradient(
+                135deg,
+                #ff0066,
+                #ff66cc,
+                #9933ff,
+                #00ccff,
+                #ff3366
+            );
+
+            background-size: 500% 500%;
+            animation: backgroundMove 8s ease infinite;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            padding: 25px;
+        }
+
+        .small {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 25px;
+
+            animation: floatText 2s infinite;
+        }
+
+        h1 {
+            color: white;
+            font-size: 65px;
+            line-height: 1.2;
+
+            text-shadow:
+                0 0 10px white,
+                0 0 20px #ff1493,
+                0 0 40px #ff00ff,
+                0 0 60px #00ffff;
+
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .name {
+            display: block;
+            margin-top: 15px;
+
+            font-size: 48px;
+            color: #fff700;
+
+            text-shadow:
+                0 0 10px white,
+                0 0 20px #ff1493,
+                0 0 40px #ff00ff;
+
+            animation: rainbowText 3s linear infinite;
+        }
+
+        .emoji {
+            font-size: 55px;
+            margin-top: 30px;
+            animation: bounce 1.5s infinite;
+        }
+
+        .message {
+            color: white;
+            font-size: 20px;
+            margin-top: 25px;
+        }
+
+        /* NEXT BUTTON */
+        .next {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+
+            background: white;
+            color: #ff1493;
+
+            border-radius: 50px;
+            text-decoration: none;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+
+            transition: 0.3s;
+        }
+
+        .next:hover {
+            transform: scale(1.1);
+            background: #fff0f8;
+        }
+
+        /* MUSIC BUTTON */
+        .music-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+
+            width: 55px;
+            height: 55px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.9);
+            color: #ff1493;
+
+            font-size: 25px;
+
+            cursor: pointer;
+            z-index: 100;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+
+            transition: 0.3s;
+        }
+
+        .music-button:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+
+        /* COLORFUL HEARTS */
+        .heart {
+            position: absolute;
+            top: -60px;
+            font-size: 35px;
+
+            animation: falling 6s linear infinite;
+        }
+
+        .heart:nth-child(1) {
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(2) {
+            left: 15%;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(3) {
+            left: 25%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(4) {
+            left: 35%;
+            animation-delay: 0.5s;
+        }
+
+        .heart:nth-child(5) {
+            left: 45%;
+            animation-delay: 3s;
+        }
+
+        .heart:nth-child(6) {
+            left: 55%;
+            animation-delay: 1.5s;
+        }
+
+        .heart:nth-child(7) {
+            left: 65%;
+            animation-delay: 2.5s;
+        }
+
+        .heart:nth-child(8) {
+            left: 75%;
+            animation-delay: 0.8s;
+        }
+
+        .heart:nth-child(9) {
+            left: 85%;
+            animation-delay: 3.5s;
+        }
+
+        .heart:nth-child(10) {
+            left: 95%;
+            animation-delay: 1.8s;
+        }
+
+        @keyframes falling {
+            0% {
+                top: -60px;
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.4);
+            }
+
+            100% {
+                top: 110vh;
+                opacity: 0;
+                transform: rotate(360deg) scale(0.8);
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+        }
+
+        @keyframes backgroundMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes floatText {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes rainbowText {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .small {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .name {
+                font-size: 32px;
+            }
+
+            .emoji {
+                font-size: 40px;
+            }
+
+            .message {
+                font-size: 17px;
+            }
+
+            .next {
+                font-size: 17px;
+                padding: 12px 24px;
+            }
+
+            .music-button {
+                width: 48px;
+                height: 48px;
+                font-size: 22px;
+                top: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="love-song3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Play/Pause Button -->
+    <button
+        class="music-button"
+        id="musicButton"
+        title="Play / Pause Music"
+    >
+        🔊
+    </button>
+
+    <!-- Colorful falling hearts -->
+    <div class="heart">❤️</div>
+    <div class="heart">💖</div>
+    <div class="heart">💙</div>
+    <div class="heart">💚</div>
+    <div class="heart">💛</div>
+    <div class="heart">💜</div>
+    <div class="heart">🩷</div>
+    <div class="heart">🧡</div>
+    <div class="heart">💝</div>
+    <div class="heart">💕</div>
+
+    <div class="content">
+
+        <div class="small">
+            💕 nan yeno helbeku ningeee... 💕
+        </div>
+
+        <h1>
+            I HATE YOU 😝
+            <span class="name">
+                GUGUKHAAANNNN 💖
+            </span>
+        </h1>
+
+        <div class="emoji">
+            😝 💕 😂 💖 😜 💗 🤭
+        </div>
+
+        <p class="message">
+            nijvagluuu jasthii💗🤭
+            u got it u got it😂💕
+        </p>
+
+        <!-- NEXT PAGE BUTTON -->
+        <a href="page4.html" class="next">
+            i'm sooo beautifull🪐💕 →
+        </a>
+
+    </div>
+
+    <script>
+        const music = document.getElementById("backgroundMusic");
+        const musicButton = document.getElementById("musicButton");
+
+        // Music volume
+        music.volume = 0.7;
+
+        // Try to start music automatically
+        function startMusic() {
+            music.play().then(() => {
+                musicButton.innerHTML = "🔊";
+            }).catch(() => {
+                // Browser blocked autoplay.
+                // Music will start after the first interaction.
+            });
+        }
+
+        // Try autoplay when page loads
+        window.addEventListener("load", function () {
+            startMusic();
+        });
+
+        // Start music after first user interaction
+        function enableMusicAfterInteraction() {
+            startMusic();
+
+            document.removeEventListener(
+                "click",
+                enableMusicAfterInteraction
+            );
+
+            document.removeEventListener(
+                "touchstart",
+                enableMusicAfterInteraction
+            );
+
+            document.removeEventListener(
+                "keydown",
+                enableMusicAfterInteraction
+            );
+        }
+
+        document.addEventListener(
+            "click",
+            enableMusicAfterInteraction
+        );
+
+        document.addEventListener(
+            "touchstart",
+            enableMusicAfterInteraction
+        );
+
+        document.addEventListener(
+            "keydown",
+            enableMusicAfterInteraction
+        );
+
+        // Play / Pause button
+        musicButton.addEventListener("click", function (event) {
+
+            // Prevent the click from triggering the general interaction listener
+            event.stopPropagation();
+
+            if (music.paused) {
+
+                music.play().then(() => {
+                    musicButton.innerHTML = "🔊";
+                }).catch(() => {
+                    musicButton.innerHTML = "🔇";
+                });
+
+            } else {
+
+                music.pause();
+                musicButton.innerHTML = "🔇";
+            }
+        });
+    </script>
+
+</body>
+</html>

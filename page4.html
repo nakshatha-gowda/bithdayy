@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>You Are So Cute antha ankobeda 💕</title>
+
+
+    <style>
+
+        * {
+
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            overflow: hidden;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(
+
+                135deg,
+
+                #ff1493,
+                #ff69b4,
+                #9b59b6,
+                #00c9ff,
+                #ff4081
+
+            );
+
+            background-size: 400% 400%;
+
+            animation:
+                backgroundMove 8s ease infinite;
+
+        }
+
+
+        /* =================================================
+           BACKGROUND MUSIC BUTTON
+        ================================================= */
+
+        .music-button {
+
+            position: fixed;
+
+            top: 18px;
+
+            right: 18px;
+
+            z-index: 1000;
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            border: 3px solid white;
+
+            background: rgba(255,255,255,0.9);
+
+            color: #ff1493;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            box-shadow:
+
+                0 0 10px white,
+
+                0 0 25px #ff1493,
+
+                0 0 40px rgba(255,20,147,0.5);
+
+            transition: 0.3s;
+
+        }
+
+
+        .music-button:hover {
+
+            transform: scale(1.12);
+
+            background: white;
+
+        }
+
+
+        .container {
+
+            position: relative;
+
+            z-index: 10;
+
+            padding: 20px;
+
+        }
+
+
+        /* =================================================
+           PHOTO
+        ================================================= */
+
+        .photo {
+
+            width: 280px;
+
+            height: 350px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            border: 8px solid white;
+
+            box-shadow:
+
+                0 0 20px white,
+
+                0 0 40px #ff1493;
+
+            animation:
+
+                photoFloat 3s ease-in-out infinite;
+
+        }
+
+
+        /* =================================================
+           MESSAGE
+        ================================================= */
+
+        h1 {
+
+            margin-top: 25px;
+
+            color: white;
+
+            font-size: 48px;
+
+            text-shadow:
+
+                0 0 10px white,
+
+                0 0 20px #ff1493,
+
+                0 0 40px #ff00ff;
+
+            animation:
+
+                heartbeat 1.5s infinite;
+
+        }
+
+
+        .message {
+
+            margin-top: 15px;
+
+            color: white;
+
+            font-size: 23px;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =================================================
+           NEXT BUTTON
+        ================================================= */
+
+        .next {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 15px 30px;
+
+            background: white;
+
+            color: #ff1493;
+
+            border-radius: 50px;
+
+            text-decoration: none;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            box-shadow:
+
+                0 5px 20px rgba(0,0,0,0.3);
+
+            transition: 0.3s;
+
+        }
+
+
+        .next:hover {
+
+            transform: scale(1.1);
+
+        }
+
+
+        /* =================================================
+           FALLING HEARTS
+        ================================================= */
+
+        .heart {
+
+            position: absolute;
+
+            top: -50px;
+
+            font-size: 35px;
+
+            animation:
+
+                falling 6s linear infinite;
+
+        }
+
+
+        .h1 {
+
+            left: 5%;
+
+            animation-delay: 0s;
+
+        }
+
+
+        .h2 {
+
+            left: 15%;
+
+            animation-delay: 1s;
+
+        }
+
+
+        .h3 {
+
+            left: 25%;
+
+            animation-delay: 2s;
+
+        }
+
+
+        .h4 {
+
+            left: 40%;
+
+            animation-delay: 0.5s;
+
+        }
+
+
+        .h5 {
+
+            left: 55%;
+
+            animation-delay: 3s;
+
+        }
+
+
+        .h6 {
+
+            left: 70%;
+
+            animation-delay: 1.5s;
+
+        }
+
+
+        .h7 {
+
+            left: 85%;
+
+            animation-delay: 2.5s;
+
+        }
+
+
+        .h8 {
+
+            left: 95%;
+
+            animation-delay: 0.8s;
+
+        }
+
+
+        /* =================================================
+           ANIMATIONS
+        ================================================= */
+
+        @keyframes backgroundMove {
+
+            0% {
+
+                background-position: 0% 50%;
+
+            }
+
+            50% {
+
+                background-position: 100% 50%;
+
+            }
+
+            100% {
+
+                background-position: 0% 50%;
+
+            }
+
+        }
+
+
+        @keyframes photoFloat {
+
+            0%, 100% {
+
+                transform:
+
+                    translateY(0)
+                    rotate(-2deg);
+
+            }
+
+            50% {
+
+                transform:
+
+                    translateY(-15px)
+                    rotate(2deg);
+
+            }
+
+        }
+
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+
+                transform: scale(1);
+
+            }
+
+            50% {
+
+                transform: scale(1.08);
+
+            }
+
+        }
+
+
+        @keyframes falling {
+
+            0% {
+
+                top: -50px;
+
+                opacity: 1;
+
+                transform: rotate(0deg);
+
+            }
+
+            50% {
+
+                transform: rotate(180deg);
+
+            }
+
+            100% {
+
+                top: 110vh;
+
+                opacity: 0;
+
+                transform: rotate(360deg);
+
+            }
+
+        }
+
+
+        /* =================================================
+           MOBILE
+        ================================================= */
+
+        @media (max-width: 600px) {
+
+            .photo {
+
+                width: 220px;
+
+                height: 280px;
+
+            }
+
+
+            h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .message {
+
+                font-size: 18px;
+
+            }
+
+
+            .next {
+
+                font-size: 17px;
+
+                padding: 12px 25px;
+
+            }
+
+
+            .music-button {
+
+                width: 43px;
+
+                height: 43px;
+
+                top: 12px;
+
+                right: 12px;
+
+                font-size: 19px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         BACKGROUND MUSIC
+    ================================================= -->
+
+    <audio id="backgroundMusic" loop>
+
+        <source
+            src="love-song4.mp3"
+            type="audio/mpeg">
+
+        Your browser does not support
+        the audio element.
+
+    </audio>
+
+
+    <!-- =================================================
+         MUSIC BUTTON
+    ================================================= -->
+
+    <button
+        class="music-button"
+        id="musicButton"
+        title="Play / Pause Music">
+
+        🔊
+
+    </button>
+
+
+    <!-- =================================================
+         FALLING COLORFUL HEARTS
+    ================================================= -->
+
+    <div class="heart h1">❤️</div>
+
+    <div class="heart h2">💖</div>
+
+    <div class="heart h3">💙</div>
+
+    <div class="heart h4">💜</div>
+
+    <div class="heart h5">💛</div>
+
+    <div class="heart h6">💚</div>
+
+    <div class="heart h7">🩷</div>
+
+    <div class="heart h8">💝</div>
+
+
+    <!-- =================================================
+         MAIN CONTENT
+    ================================================= -->
+
+    <div class="container">
+
+
+        <!-- YOUR PHOTO -->
+
+        <img
+            src="cute.jpg"
+            alt="Cute photo"
+            class="photo">
+
+
+        <!-- MESSAGE -->
+
+        <h1>
+
+            You are sooo cute
+            antha ankobeda! 🥰💕
+
+        </h1>
+
+
+        <p class="message">
+
+            adru nannastu cute agi
+            ella biduu😭💖✨
+
+        </p>
+
+
+        <!-- =================================================
+             NEXT PAGE
+        ================================================= -->
+
+        <a
+            href="page5.html"
+            class="next">
+
+            aioo nin alla nanuu🪐💕 →
+
+        </a>
+
+
+    </div>
+
+
+    <!-- =================================================
+         MUSIC JAVASCRIPT
+    ================================================= -->
+
+    <script>
+
+
+        /* ================================================
+           GET MUSIC ELEMENTS
+        ================================================= */
+
+        const music =
+            document.getElementById(
+                "backgroundMusic"
+            );
+
+
+        const musicButton =
+            document.getElementById(
+                "musicButton"
+            );
+
+
+        /* ================================================
+           MUSIC VOLUME
+        ================================================= */
+
+        music.volume = 0.7;
+
+
+        /* ================================================
+           START MUSIC
+        ================================================= */
+
+        function startMusic() {
+
+            music.play()
+
+                .then(() => {
+
+                    musicButton.innerHTML = "🔊";
+
+                })
+
+                .catch(() => {
+
+                    /*
+                     * Some browsers block
+                     * autoplay with sound.
+                     *
+                     * The first user interaction
+                     * will start the music.
+                     */
+
+                });
+
+        }
+
+
+        /* ================================================
+           TRY AUTOMATIC PLAY WHEN PAGE OPENS
+        ================================================= */
+
+        window.addEventListener(
+            "load",
+            function() {
+
+                startMusic();
+
+            }
+        );
+
+
+        /* ================================================
+           START MUSIC AFTER FIRST INTERACTION
+        ================================================= */
+
+        function enableMusicAfterInteraction() {
+
+            startMusic();
+
+
+            document.removeEventListener(
+                "click",
+                enableMusicAfterInteraction
+            );
+
+
+            document.removeEventListener(
+                "touchstart",
+                enableMusicAfterInteraction
+            );
+
+
+            document.removeEventListener(
+                "keydown",
+                enableMusicAfterInteraction
+            );
+
+        }
+
+
+        /* ================================================
+           USER INTERACTION LISTENERS
+        ================================================= */
+
+        document.addEventListener(
+            "click",
+            enableMusicAfterInteraction
+        );
+
+
+        document.addEventListener(
+            "touchstart",
+            enableMusicAfterInteraction
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            enableMusicAfterInteraction
+        );
+
+
+        /* ================================================
+           PLAY / PAUSE BUTTON
+        ================================================= */
+
+        musicButton.addEventListener(
+            "click",
+            function(event) {
+
+                /*
+                 * Stop this click from
+                 * triggering the general
+                 * interaction listener.
+                 */
+
+                event.stopPropagation();
+
+
+                if (music.paused) {
+
+                    music.play();
+
+                    musicButton.innerHTML = "🔊";
+
+                }
+
+                else {
+
+                    music.pause();
+
+                    musicButton.innerHTML = "🔇";
+
+                }
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>

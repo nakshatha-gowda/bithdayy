@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>i am the bigest Surprise to u 💕</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff758c,
+                    #ff7eb3,
+                    #c471ed
+                );
+        }
+
+
+        .page {
+            color: white;
+            padding: 30px;
+            position: relative;
+            z-index: 10;
+        }
+
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+
+            animation:
+                heartbeat 1.5s infinite;
+        }
+
+
+        .message {
+            font-size: 21px;
+            margin-bottom: 30px;
+        }
+
+
+        .gift {
+            font-size: 120px;
+
+            cursor: pointer;
+
+            animation:
+                bounce 1.5s infinite;
+
+            transition: 0.3s;
+        }
+
+
+        .gift:hover {
+            transform: scale(1.2);
+        }
+
+
+        .click {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           MUSIC BUTTON
+        ========================= */
+
+        .music-button {
+            position: fixed;
+
+            top: 20px;
+            right: 20px;
+
+            width: 55px;
+            height: 55px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.9);
+
+            color: #ff1493;
+
+            font-size: 25px;
+
+            cursor: pointer;
+
+            z-index: 100;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.3);
+
+            transition: 0.3s;
+        }
+
+
+        .music-button:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+
+
+        /* =========================
+           FALLING HEARTS
+        ========================= */
+
+        .heart {
+            position: absolute;
+
+            font-size: 28px;
+
+            animation:
+                fall 5s linear infinite;
+        }
+
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes bounce {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+        }
+
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+
+        }
+
+
+        @keyframes fall {
+
+            0% {
+                top: -50px;
+                opacity: 1;
+            }
+
+            100% {
+                top: 110vh;
+                opacity: 0;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 30px;
+            }
+
+
+            .message {
+                font-size: 17px;
+            }
+
+
+            .gift {
+                font-size: 90px;
+            }
+
+
+            .click {
+                font-size: 16px;
+            }
+
+
+            .music-button {
+                width: 48px;
+                height: 48px;
+
+                font-size: 22px;
+
+                top: 15px;
+                right: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         BACKGROUND MUSIC
+    ========================= -->
+
+    <audio id="backgroundMusic" loop>
+
+        <source
+            src="love-song.mp3"
+            type="audio/mpeg">
+
+        Your browser does not support
+        the audio element.
+
+    </audio>
+
+
+    <!-- =========================
+         MUSIC PLAY / PAUSE BUTTON
+    ========================= -->
+
+    <button
+        class="music-button"
+        id="musicButton"
+        title="Play / Pause Music">
+
+        🔊
+
+    </button>
+
+
+    <!-- =========================
+         FALLING HEARTS
+    ========================= -->
+
+    <div
+        class="heart"
+        style="left: 10%; animation-delay: 0s;">
+        ❤️
+    </div>
+
+    <div
+        class="heart"
+        style="left: 25%; animation-delay: 1s;">
+        💕
+    </div>
+
+    <div
+        class="heart"
+        style="left: 40%; animation-delay: 2s;">
+        💖
+    </div>
+
+    <div
+        class="heart"
+        style="left: 60%; animation-delay: 1.5s;">
+        💗
+    </div>
+
+    <div
+        class="heart"
+        style="left: 80%; animation-delay: 3s;">
+        💓
+    </div>
+
+    <div
+        class="heart"
+        style="left: 90%; animation-delay: 0.5s;">
+        ❤️
+    </div>
+
+
+    <!-- =========================
+         MAIN PAGE
+    ========================= -->
+
+    <div class="page">
+
+        <h1>
+            💕 Hey Beautifulll ganviiiiii💕
+        </h1>
+
+
+        <p class="message">
+            nodake ready naaaa... 🥰
+        </p>
+
+
+        <!-- Click the gift -->
+
+        <div
+            class="gift"
+            onclick="openGift()">
+
+            🎁
+
+        </div>
+
+
+        <p class="click">
+            ✨ Click the gift to open your surprise ✨
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         MUSIC SCRIPT
+    ========================= -->
+
+    <script>
+
+        const music =
+            document.getElementById(
+                "backgroundMusic"
+            );
+
+
+        const musicButton =
+            document.getElementById(
+                "musicButton"
+            );
+
+
+        /* Music volume */
+
+        music.volume = 0.7;
+
+
+        /* =========================
+           START MUSIC
+        ========================= */
+
+        function startMusic() {
+
+            music.play().then(function() {
+
+                musicButton.innerHTML = "🔊";
+
+            }).catch(function() {
+
+                /*
+                    Browser blocked autoplay.
+                    Music will start after
+                    the first interaction.
+                */
+
+            });
+
+        }
+
+
+        /* Try autoplay when page loads */
+
+        window.addEventListener(
+            "load",
+            function() {
+
+                startMusic();
+
+            }
+        );
+
+
+        /* =========================
+           FIRST USER INTERACTION
+        ========================= */
+
+        function enableMusicAfterInteraction() {
+
+            startMusic();
+
+
+            document.removeEventListener(
+                "click",
+                enableMusicAfterInteraction
+            );
+
+
+            document.removeEventListener(
+                "touchstart",
+                enableMusicAfterInteraction
+            );
+
+
+            document.removeEventListener(
+                "keydown",
+                enableMusicAfterInteraction
+            );
+
+        }
+
+
+        document.addEventListener(
+            "click",
+            enableMusicAfterInteraction
+        );
+
+
+        document.addEventListener(
+            "touchstart",
+            enableMusicAfterInteraction
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            enableMusicAfterInteraction
+        );
+
+
+        /* =========================
+           PLAY / PAUSE MUSIC
+        ========================= */
+
+        musicButton.addEventListener(
+            "click",
+            function(event) {
+
+                event.stopPropagation();
+
+
+                if (music.paused) {
+
+                    music.play().then(function() {
+
+                        musicButton.innerHTML = "🔊";
+
+                    }).catch(function() {
+
+                        musicButton.innerHTML = "🔇";
+
+                    });
+
+                }
+
+                else {
+
+                    music.pause();
+
+                    musicButton.innerHTML = "🔇";
+
+                }
+
+            }
+        );
+
+
+        /* =========================
+           OPEN GIFT
+        ========================= */
+
+        function openGift() {
+
+            window.location.href =
+                "page1.html";
+
+        }
+
+    </script>
+
+
+</body>
+</html>

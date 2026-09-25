@@ -1,0 +1,1277 @@
+<!-- =====================================================
+     PAGE 6 - MAGICAL TREE WITH 4 PHOTOS
+====================================================== -->
+
+<section id="page6" class="page tree-page">
+
+    <!-- =================================================
+         BACKGROUND MUSIC
+    ================================================== -->
+
+    <audio id="backgroundMusic" loop>
+        <source src="love-song6.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <!-- =================================================
+         MUSIC BUTTON
+    ================================================== -->
+
+    <button
+        class="music-button"
+        id="musicButton"
+        title="Play / Pause Music">
+
+        🔊
+
+    </button>
+
+
+    <!-- =================================================
+         BACKGROUND DECORATIONS
+    ================================================== -->
+
+    <div class="tree-sparkle sparkle1">✦</div>
+    <div class="tree-sparkle sparkle2">✧</div>
+    <div class="tree-sparkle sparkle3">✦</div>
+    <div class="tree-sparkle sparkle4">✧</div>
+
+    <div class="floating-heart fh1">💕</div>
+    <div class="floating-heart fh2">💗</div>
+    <div class="floating-heart fh3">💖</div>
+
+
+    <!-- =================================================
+         TITLE
+    ================================================== -->
+
+    <h1 class="tree-title">
+        🌳 Little Memories 🌳
+    </h1>
+
+    <p class="tree-subtitle">
+        Every picture holds a beautiful little memory... ✨
+    </p>
+
+
+    <!-- =================================================
+         TREE
+    ================================================== -->
+
+    <div class="memory-tree">
+
+        <!-- TREE TRUNK -->
+
+        <div class="trunk-main"></div>
+
+        <div class="trunk-left"></div>
+
+        <div class="trunk-right"></div>
+
+
+        <!-- =================================================
+             BRANCHES
+        ================================================== -->
+
+        <div class="tree-branch branch-left-top"></div>
+
+        <div class="tree-branch branch-right-top"></div>
+
+        <div class="tree-branch branch-left-bottom"></div>
+
+        <div class="tree-branch branch-right-bottom"></div>
+
+
+        <!-- =================================================
+             PHOTO 1
+        ================================================== -->
+
+        <div class="memory-photo photo1">
+
+            <img
+                src="cute1.jpg"
+                alt="Memory Photo 1"
+            >
+
+            <div class="photo-heart">
+                💕
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PHOTO 2
+        ================================================== -->
+
+        <div class="memory-photo photo2">
+
+            <img
+                src="cute2.jpg"
+                alt="Memory Photo 2"
+            >
+
+            <div class="photo-heart">
+                💖
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PHOTO 3
+        ================================================== -->
+
+        <div class="memory-photo photo3">
+
+            <img
+                src="cute3.jpg"
+                alt="Memory Photo 3"
+            >
+
+            <div class="photo-heart">
+                💗
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PHOTO 4
+        ================================================== -->
+
+        <div class="memory-photo photo4">
+
+            <img
+                src="cute4.jpg"
+                alt="Memory Photo 4"
+            >
+
+            <div class="photo-heart">
+                💓
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             LEAVES
+        ================================================== -->
+
+        <div class="tree-leaf leaf1">🌿</div>
+
+        <div class="tree-leaf leaf2">🍃</div>
+
+        <div class="tree-leaf leaf3">🌿</div>
+
+        <div class="tree-leaf leaf4">🍃</div>
+
+        <div class="tree-leaf leaf5">🌿</div>
+
+        <div class="tree-leaf leaf6">🍃</div>
+
+        <div class="tree-leaf leaf7">🌿</div>
+
+        <div class="tree-leaf leaf8">🍃</div>
+
+    </div>
+
+
+    <!-- =================================================
+         MESSAGE
+    ================================================== -->
+
+    <div class="tree-message">
+
+        🌸 Four memories... one beautiful family... 🌸
+
+        <br>
+
+        always be happy no BP 💕✨
+
+    </div>
+
+
+    <!-- =================================================
+         NEXT PAGE 7
+    ================================================== -->
+
+    <a href="page7.html" class="tree-next">
+
+        soo soo  beautifull🪐💕 →
+
+    </a>
+
+
+</section>
+
+
+
+<style>
+
+/* =====================================================
+   PAGE BACKGROUND
+===================================================== */
+
+.tree-page {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 10px;
+
+    color: white;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255,170,220,0.25),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #071b52,
+            #123c62,
+            #315d59,
+            #172f3c
+        );
+
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+.music-button {
+
+    position: fixed;
+
+    top: 18px;
+
+    right: 18px;
+
+    z-index: 1000;
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 2px solid #9fffd0;
+
+    background: rgba(255,255,255,0.9);
+
+    color: #ff3f9d;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 0 10px rgba(255,105,180,0.6),
+
+        0 0 25px rgba(255,105,180,0.3);
+
+    transition: 0.3s;
+
+}
+
+.music-button:hover {
+
+    transform: scale(1.1);
+
+    background: #fff5fa;
+
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.tree-title {
+
+    position: relative;
+
+    z-index: 20;
+
+    font-size: 40px;
+
+    margin: 0 0 4px;
+
+    color: white;
+
+    text-shadow:
+
+        0 0 8px white,
+
+        0 0 18px #8affcf,
+
+        0 0 35px #43d99b;
+
+    animation:
+        titlePulse 2s infinite alternate;
+
+}
+
+
+@keyframes titlePulse {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.04);
+    }
+
+}
+
+
+.tree-subtitle {
+
+    position: relative;
+
+    z-index: 20;
+
+    margin: 0 0 2px;
+
+    font-size: 17px;
+
+    text-shadow:
+        0 0 8px white;
+
+}
+
+
+/* =====================================================
+   TREE AREA
+===================================================== */
+
+.memory-tree {
+
+    position: relative;
+
+    width: 620px;
+
+    height: 480px;
+
+    max-width: 95vw;
+
+}
+
+
+/* =====================================================
+   MAIN TRUNK
+===================================================== */
+
+.trunk-main {
+
+    position: absolute;
+
+    width: 70px;
+
+    height: 320px;
+
+    left: 50%;
+
+    bottom: 5px;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    border-radius:
+        45% 55%
+        20% 25%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #25130d,
+            #57301d,
+            #8a5430,
+            #4b2818,
+            #25130d
+        );
+
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.45);
+
+    z-index: 2;
+
+}
+
+
+/* =====================================================
+   CURVED ROOTS
+===================================================== */
+
+.trunk-left {
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 45px;
+
+    left: 34%;
+
+    bottom: 0;
+
+    border-radius:
+        100% 0 0 0;
+
+    background:
+        #51301e;
+
+    transform:
+        rotate(-12deg);
+
+}
+
+
+.trunk-right {
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 45px;
+
+    right: 34%;
+
+    bottom: 0;
+
+    border-radius:
+        0 100% 0 0;
+
+    background:
+        #51301e;
+
+    transform:
+        rotate(12deg);
+
+}
+
+
+/* =====================================================
+   BRANCHES
+===================================================== */
+
+.tree-branch {
+
+    position: absolute;
+
+    height: 25px;
+
+    border-radius: 30px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #30180e,
+            #75472b,
+            #9a623d
+        );
+
+    transform-origin: left center;
+
+    z-index: 3;
+
+}
+
+
+/* LEFT TOP */
+
+.branch-left-top {
+
+    width: 270px;
+
+    left: 49%;
+
+    top: 125px;
+
+    transform:
+        rotate(-145deg);
+
+}
+
+
+/* RIGHT TOP */
+
+.branch-right-top {
+
+    width: 270px;
+
+    left: 51%;
+
+    top: 125px;
+
+    transform:
+        rotate(-35deg);
+
+}
+
+
+/* LEFT BOTTOM */
+
+.branch-left-bottom {
+
+    width: 220px;
+
+    left: 49%;
+
+    top: 230px;
+
+    transform:
+        rotate(-165deg);
+
+}
+
+
+/* RIGHT BOTTOM */
+
+.branch-right-bottom {
+
+    width: 220px;
+
+    left: 51%;
+
+    top: 230px;
+
+    transform:
+        rotate(-15deg);
+
+}
+
+
+/* =====================================================
+   PHOTO FRAMES
+===================================================== */
+
+.memory-photo {
+
+    position: absolute;
+
+    width: 125px;
+
+    height: 125px;
+
+    padding: 6px;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #ffd2ef,
+            #ffffff
+        );
+
+    border: 4px solid white;
+
+    box-shadow:
+
+        0 0 10px white,
+
+        0 0 25px #ff7bd4,
+
+        0 8px 20px rgba(0,0,0,0.4);
+
+    z-index: 10;
+
+    animation:
+        photoFloat 3s ease-in-out infinite;
+
+}
+
+
+/* PHOTO IMAGE */
+
+.memory-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   PHOTO POSITIONS
+===================================================== */
+
+.photo1 {
+
+    top: 25px;
+
+    left: 75px;
+
+}
+
+
+.photo2 {
+
+    top: 25px;
+
+    right: 75px;
+
+    animation-delay: 0.5s;
+
+}
+
+
+.photo3 {
+
+    top: 210px;
+
+    left: 35px;
+
+    animation-delay: 1s;
+
+}
+
+
+.photo4 {
+
+    top: 210px;
+
+    right: 35px;
+
+    animation-delay: 1.5s;
+
+}
+
+
+/* =====================================================
+   PHOTO HEART
+===================================================== */
+
+.photo-heart {
+
+    position: absolute;
+
+    right: -12px;
+
+    bottom: -8px;
+
+    font-size: 25px;
+
+    animation:
+        heartBeat 1.2s infinite;
+
+}
+
+
+@keyframes photoFloat {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px)
+            rotate(2deg);
+
+    }
+
+}
+
+
+@keyframes heartBeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+}
+
+
+/* =====================================================
+   LEAVES
+===================================================== */
+
+.tree-leaf {
+
+    position: absolute;
+
+    z-index: 6;
+
+    font-size: 35px;
+
+    filter:
+        drop-shadow(
+            0 0 5px rgba(100,255,180,0.8)
+        );
+
+    animation:
+        leafMove 3s infinite ease-in-out;
+
+}
+
+
+.leaf1 {
+    left: 150px;
+    top: 110px;
+}
+
+.leaf2 {
+    left: 215px;
+    top: 75px;
+}
+
+.leaf3 {
+    right: 150px;
+    top: 110px;
+}
+
+.leaf4 {
+    right: 215px;
+    top: 75px;
+}
+
+.leaf5 {
+    left: 120px;
+    top: 245px;
+}
+
+.leaf6 {
+    left: 220px;
+    top: 275px;
+}
+
+.leaf7 {
+    right: 120px;
+    top: 245px;
+}
+
+.leaf8 {
+    right: 220px;
+    top: 275px;
+}
+
+
+@keyframes leafMove {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(-5deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px)
+            rotate(5deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.tree-message {
+
+    position: relative;
+
+    z-index: 20;
+
+    font-size: 17px;
+
+    line-height: 1.35;
+
+    margin: -12px 0 6px;
+
+    text-shadow:
+        0 0 8px white;
+
+}
+
+
+/* =====================================================
+   NEXT BUTTON
+===================================================== */
+
+.tree-next {
+
+    position: relative;
+
+    z-index: 30;
+
+    padding: 12px 30px;
+
+    border: 2px solid #9fffd0;
+
+    border-radius: 40px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,90,190,0.55),
+            rgba(80,170,130,0.45)
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    box-shadow:
+
+        0 0 10px #75ffc1,
+
+        0 0 25px rgba(255,100,210,0.5);
+
+    transition:
+        0.3s;
+
+}
+
+
+.tree-next:hover {
+
+    transform:
+        scale(1.08);
+
+    box-shadow:
+
+        0 0 20px #8fffd0,
+
+        0 0 35px #ff70cf;
+
+}
+
+
+/* =====================================================
+   FLOATING BACKGROUND STARS
+===================================================== */
+
+.tree-sparkle {
+
+    position: absolute;
+
+    color: white;
+
+    font-size: 30px;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 20px #9affd4;
+
+    animation:
+        sparkleMove 1.5s infinite alternate;
+
+}
+
+
+.sparkle1 {
+    top: 10%;
+    left: 10%;
+}
+
+.sparkle2 {
+    top: 20%;
+    right: 10%;
+}
+
+.sparkle3 {
+    bottom: 20%;
+    left: 12%;
+}
+
+.sparkle4 {
+    bottom: 15%;
+    right: 12%;
+}
+
+
+@keyframes sparkleMove {
+
+    from {
+
+        opacity: 0.3;
+
+        transform:
+            scale(0.7);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1.2);
+
+    }
+
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.floating-heart {
+
+    position: absolute;
+
+    color: #ff91da;
+
+    font-size: 40px;
+
+    text-shadow:
+        0 0 10px #ff62c9;
+
+    animation:
+        floatingHeart 3s infinite ease-in-out;
+
+}
+
+
+.fh1 {
+    top: 32%;
+    left: 5%;
+}
+
+.fh2 {
+    top: 38%;
+    right: 5%;
+}
+
+.fh3 {
+    bottom: 18%;
+    right: 15%;
+}
+
+
+@keyframes floatingHeart {
+
+    0%, 100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .tree-title {
+
+        font-size: 27px;
+
+    }
+
+
+    .tree-subtitle {
+
+        font-size: 13px;
+
+    }
+
+
+    .memory-tree {
+
+        width: 360px;
+
+        height: 400px;
+
+        transform:
+            scale(0.78);
+
+        margin-top: -25px;
+
+        margin-bottom: -45px;
+
+    }
+
+
+    .memory-photo {
+
+        width: 90px;
+
+        height: 90px;
+
+        border-width: 3px;
+
+    }
+
+
+    .photo1 {
+
+        left: 45px;
+
+        top: 40px;
+
+    }
+
+
+    .photo2 {
+
+        right: 45px;
+
+        top: 40px;
+
+    }
+
+
+    .photo3 {
+
+        left: 15px;
+
+        top: 215px;
+
+    }
+
+
+    .photo4 {
+
+        right: 15px;
+
+        top: 215px;
+
+    }
+
+
+    .tree-message {
+
+        font-size: 13px;
+
+    }
+
+
+    .tree-next {
+
+        font-size: 15px;
+
+        padding: 10px 23px;
+
+    }
+
+
+    .music-button {
+
+        width: 42px;
+
+        height: 42px;
+
+        top: 12px;
+
+        right: 12px;
+
+        font-size: 19px;
+
+    }
+
+}
+
+</style>
+
+
+
+<script>
+
+/* =====================================================
+   BACKGROUND MUSIC
+===================================================== */
+
+const music =
+    document.getElementById("backgroundMusic");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+
+/* MUSIC VOLUME */
+
+music.volume = 0.7;
+
+
+/* =====================================================
+   PLAY MUSIC
+===================================================== */
+
+function startMusic() {
+
+    music.play()
+
+        .then(() => {
+
+            musicButton.innerHTML = "🔊";
+
+        })
+
+        .catch(() => {
+
+            /*
+             * Some browsers block automatic
+             * audio until the user interacts
+             * with the page.
+             */
+
+        });
+
+}
+
+
+/* =====================================================
+   TRY AUTOPLAY WHEN PAGE OPENS
+===================================================== */
+
+window.addEventListener("load", () => {
+
+    startMusic();
+
+});
+
+
+/* =====================================================
+   START MUSIC AFTER FIRST INTERACTION
+===================================================== */
+
+function enableMusicAfterInteraction() {
+
+    startMusic();
+
+    document.removeEventListener(
+        "click",
+        enableMusicAfterInteraction
+    );
+
+    document.removeEventListener(
+        "touchstart",
+        enableMusicAfterInteraction
+    );
+
+    document.removeEventListener(
+        "keydown",
+        enableMusicAfterInteraction
+    );
+
+}
+
+
+/* =====================================================
+   FIRST CLICK / TOUCH / KEYBOARD
+===================================================== */
+
+document.addEventListener(
+    "click",
+    enableMusicAfterInteraction
+);
+
+document.addEventListener(
+    "touchstart",
+    enableMusicAfterInteraction
+);
+
+document.addEventListener(
+    "keydown",
+    enableMusicAfterInteraction
+);
+
+
+/* =====================================================
+   MUSIC PLAY / PAUSE BUTTON
+===================================================== */
+
+musicButton.addEventListener(
+    "click",
+    function(event) {
+
+        /*
+         * Stop this click from triggering
+         * the general interaction listener.
+         */
+
+        event.stopPropagation();
+
+
+        if (music.paused) {
+
+            music.play();
+
+            musicButton.innerHTML = "🔊";
+
+        }
+
+        else {
+
+            music.pause();
+
+            musicButton.innerHTML = "🔇";
+
+        }
+
+    }
+);
+
+</script>
